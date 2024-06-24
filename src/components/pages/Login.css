@@ -1,0 +1,12 @@
+.login {
+  /* display: grid;
+  place-items: center; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login > img {
+  width: 100%;
+}
