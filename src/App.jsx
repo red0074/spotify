@@ -1,10 +1,12 @@
 import { useState } from "react";
 import "./App.css";
+import Login from "./components/pages/Login";
 
 function App() {
   return (
     <>
-      <h1>this is the first app </h1>
+      {/* login page as landing page */}
+      <Login />
     </>
   );
 }
