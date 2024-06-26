@@ -1,0 +1,58 @@
+.footer {
+  position: fiexd;
+  bottom: 0;
+  height: 66px;
+  background-color: #282828;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__left {
+  flex: 0.3;
+  display: flex;
+  align-items: center;
+  color: white;
+  width: 300px;
+}
+.footer__albumlogo {
+  height: 60px;
+  width: 60px;
+  margin-right: 20px;
+}
+.footer_center {
+  flex: 0.4;
+  padding: 0 100px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 300px;
+}
+.footer__right {
+  flex-wrap: wrap;
+  flex: 0.3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+.footer__green {
+  color: #1ed15e;
+}
+.footer__songInfo > h4 {
+  margin-bottom: 5px;
+}
+.footer__songInfo > p {
+  font-size: 12px;
+}
+
+.footer__green:hover,
+.footer__icon:hover {
+  transition: transfrom 0.2s ease-in-out;
+  transform: scale(1.2) !important;
+}
+
+.footer__right * .MuiSlider-root {
+  color: #1ed15e;
+}
