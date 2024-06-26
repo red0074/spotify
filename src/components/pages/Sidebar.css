@@ -3,17 +3,32 @@
   flex: 0.2;
   background-color: #040404;
   color: white;
-  min-width: 230px;
+  min-width: 300px;
   padding-left: 10px;
   padding-right: 10px;
 }
-.sidebar__logo {
-  height: 70px;
-  padding: 10px;
-  margin-right: auto;
+
+.top__options {
+  height: 80px;
+  background-color: #212121;
+  border-radius: 15px;
+  padding-left: 10px;
+  margin-top: 10px;
 }
-.sidebar__title {
-  margin-left: 10px;
-  padding: 5px;
-  font-size: 12px;
+.below__options {
+  background-color: #212121;
+  height: 86.5%;
+  border-radius: 15px;
+  gap: 4px;
+}
+.set1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 8px;
+}
+.set2 {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 4px 4px;
 }

@@ -3,28 +3,43 @@ import "./Sidebar.css";
 import SidebarOption from "./SidebarOption";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
-import LibraryMusicOutlinedIcon from "@mui/icons-material/LibraryMusicOutlined";
+import AddIcon from "@mui/icons-material/Add";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { useDataLayerValue } from "./DataLayer";
+import Buttons from "./Buttons";
 
 function Sidebar() {
   const [{ playlists }, dispatch] = useDataLayerValue();
   return (
     <div className="sidebar">
-      <img
+      {/* <img
         className="sidebar__logo"
         src="https://getheavy.com/wp-content/uploads/2019/12/spotify2019-830x350.jpg"
         alt="spotify-logo"
-      />
+      /> */}
       {/* options */}
-      <SidebarOption Icon={HomeOutlinedIcon} title="Home" />
-      <SidebarOption Icon={SearchOutlinedIcon} title="Search" />
-      <SidebarOption Icon={LibraryMusicOutlinedIcon} title="Your Library" />
+      <div className="top__options">
+        <SidebarOption Icon={HomeOutlinedIcon} title="Home" />
+        <SidebarOption Icon={SearchOutlinedIcon} title="Search" />
+      </div>
       <br />
-      <strong className="sidebar__title">PLAYLISTS</strong>
-      <hr />
-      {playlists?.items?.map((playlist) => (
-        <SidebarOption title={playlist.name} />
-      ))}
+      <div className="below__options">
+        <div className="set1">
+          <SidebarOption title="Your Library" />
+          <SidebarOption Icon={AddIcon} />
+          <SidebarOption Icon={ArrowForwardIcon} />
+        </div>
+        <div className="set2">
+          <Buttons title="playlists" />
+          <Buttons title="artists" />
+          <Buttons title="albums" />
+        </div>
+        <div className="playlistbar">
+          {playlists?.items?.map((playlist) => (
+            <SidebarOption title={playlist.name} />
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
