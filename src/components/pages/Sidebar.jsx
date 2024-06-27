@@ -7,6 +7,8 @@ import AddIcon from "@mui/icons-material/Add";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { useDataLayerValue } from "./DataLayer";
 import Buttons from "./Buttons";
+import SearchIcon from "@mui/icons-material/Search";
+import MenuIcon from "@mui/icons-material/Menu";
 
 function Sidebar() {
   const [{ playlists }, dispatch] = useDataLayerValue();
@@ -25,14 +27,28 @@ function Sidebar() {
       <br />
       <div className="below__options">
         <div className="set1">
-          <SidebarOption title="Your Library" />
-          <SidebarOption Icon={AddIcon} />
-          <SidebarOption Icon={ArrowForwardIcon} />
+          <div className="set1__left">
+            <SidebarOption title="Your Library" />
+          </div>
+          <div className="set1__right">
+            <SidebarOption Icon={AddIcon} />
+            <SidebarOption Icon={ArrowForwardIcon} />
+          </div>
         </div>
         <div className="set2">
           <Buttons title="playlists" />
           <Buttons title="artists" />
           <Buttons title="albums" />
+        </div>
+        <div className="set3">
+          {/* search */}
+          <div className="search">
+            <SearchIcon />
+          </div>
+          <div className="recent">
+            <h4>Recent</h4>
+            <MenuIcon />
+          </div>
         </div>
         <div className="playlistbar">
           {playlists?.items?.map((playlist) => (

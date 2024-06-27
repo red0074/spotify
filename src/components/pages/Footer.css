@@ -1,11 +1,13 @@
 .footer {
   position: fiexd;
   bottom: 0;
-  height: 66px;
+  height: 74px;
   background-color: #282828;
   padding: 20px;
   display: flex;
   justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .footer__left {

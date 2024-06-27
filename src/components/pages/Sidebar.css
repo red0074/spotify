@@ -1,7 +1,6 @@
 .sidebar {
-  height: 89vh;
+  height: 88vh;
   flex: 0.2;
-  background-color: #040404;
   color: white;
   min-width: 300px;
   padding-left: 10px;
@@ -27,8 +26,40 @@
   align-items: center;
   padding: 8px 8px;
 }
+.set1__right {
+  display: flex;
+}
 .set2 {
   display: flex;
   justify-content: space-evenly;
   padding: 4px 4px;
+}
+.set3 {
+  display: flex;
+  height: 25px;
+  justify-content: space-between;
+  padding: 8px 8px;
+}
+.search {
+  padding-left: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+}
+.search:hover {
+  border-radius: 50%;
+  background-color: #3c3a3a;
+}
+
+.recent {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px;
+  gap: 4px;
+  color: grey;
+  transition: 100ms color ease-in;
+}
+.recent:hover {
+  color: white;
 }
